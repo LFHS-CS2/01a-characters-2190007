@@ -13,6 +13,16 @@ class Employee {
   public String getFirstName() { return firstName; }
   public char getMiddleInitial() { return middleInitial;}
   public String getLastName() { return lastName; }
+	public boolean hasDoubleName(){
+		if(lastName.equals(firstName)){
+			return true;
+		} else{
+			return false;
+		}
+	}
+	public char getLastInitial(){
+		return lastName.charAt(0);
+	}
   
  
 }
