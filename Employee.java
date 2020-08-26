@@ -24,5 +24,23 @@ class Employee {
 		return lastName.charAt(0);
 	}
   
+	public int getNameLength(){
+		int nl = lastName.length();
+		nl = nl + 1 + firstName.length();
+		return nl;
+	}
+	public String getFullName(){
+		String ucfn = firstName.toUpperCase();
+		String fn = ucfn + " " + middleInitial + ". ";
+		String ucln = lastName.toUpperCase();
+		fn = fn + ucln;
+		return fn;
+	}
+	public String getMonogram(){
+		String mono = firstName.charAt(0) + middleInitial + lastName.charAt(0);
+		String ucmono = mono.toLowerCase();
+		return ucmono;
+	}
+ 
  
 }
